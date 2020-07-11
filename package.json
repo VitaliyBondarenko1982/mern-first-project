@@ -1,0 +1,28 @@
+{
+  "name": "mern-first-project",
+  "version": "1.0.0",
+  "description": "MERN stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "author": "Vitalii Bondarenko <vitalii.bondarenko.ua@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "i": "^0.3.6",
+    "mongoose": "^5.9.23",
+    "npm": "^6.14.6"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
