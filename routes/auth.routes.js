@@ -17,6 +17,7 @@ router.post(
 ],
 async (req, res) => {
   try {
+    console.log('Body', req.body);
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
@@ -66,7 +67,7 @@ router.post(
 
       const { email, password } = req.body;
 
-      const user = await User.findOne({ eamil });
+      const user = await User.findOne({ email });
 
       if (!user) {
         return res.status(400).json({ message: 'User was not found' });
