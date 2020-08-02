@@ -2,7 +2,7 @@ const express = require('express');
 const config = require('config');
 const path = require('path');
 const  mongoose = require('mongoose');
-
+const port = process.env.PORT || config.get('port');
 const app = express();
 
 app.use(express.json({extended: true}));
@@ -19,8 +19,6 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
-const PORT = config.get('port') || 5000;
-
 async function start() {
   try {
     await mongoose.connect(config.get('mongoUrl'), {
@@ -36,4 +34,4 @@ async function start() {
 
 start();
 
-app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`));
+app.listen(port, () => console.log(`App has been started on port ${port}...`));
