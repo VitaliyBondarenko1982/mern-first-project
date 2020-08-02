@@ -2,7 +2,7 @@ const express = require('express');
 const config = require('config');
 const path = require('path');
 const  mongoose = require('mongoose');
-const port = process.env.PORT || config.get('port');
+const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json({extended: true}));
