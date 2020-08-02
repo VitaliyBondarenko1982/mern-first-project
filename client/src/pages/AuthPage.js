@@ -46,6 +46,7 @@ export const AuthPage = () => {
 
     } catch (e) {}
   }
+
   return (
     <div className="row">
       <div className="col s6 offset-s3">
@@ -70,7 +71,7 @@ export const AuthPage = () => {
                 <div className="input-field">
                   <input
                   id="password"
-                  type="text"
+                  type="password"
                   name="password"
                   placeholder="Enter password"
                   className="yellow-input"
